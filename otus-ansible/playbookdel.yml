@@ -1,0 +1,7 @@
+---
+- hosts: lin
+  become: yes
+
+  tasks:
+    - name: remove apache2
+      apt: name=apache2 purge=yes autoremove=yes state=absent
